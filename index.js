@@ -14,7 +14,7 @@ const requestLength = function (type) {
 const responseLength = function (type) {
   switch (type) {
     case MessageType.READ_ALL:
-      return 5
+      return 13
   }
 }
 
@@ -45,7 +45,9 @@ class ProtocolStream extends Duplex {
 
       switch (type) {
         case MessageType.READ_ALL:
-          response.temperature = buffer.readFloatBE(0)
+          response.overflowTankTemperature = buffer.readFloatBE(0)
+          response.environmentTemperature = buffer.readFloatBE(4)
+          response.environmentHumidity = buffer.readFloatBE(8)
           break
       }
 
