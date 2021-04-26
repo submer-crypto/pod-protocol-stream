@@ -1,6 +1,6 @@
 {
   "name": "@thermocline-labs/pod-protocol-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pod microcontroller protocol implementation",
   "main": "index.js",
   "scripts": {
